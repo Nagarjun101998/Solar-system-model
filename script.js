@@ -5,7 +5,7 @@ function init() {
   sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
   moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
   earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
-    draw();
+    window.requestAnimationFrame(draw);
 }
 
 function draw() {
@@ -40,6 +40,8 @@ function draw() {
   ctx.stroke();
 
   ctx.drawImage(sun, 0, 0, 300, 300);
+
+  window.requestAnimationFrame(draw);
 
   
 }
